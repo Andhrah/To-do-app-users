@@ -3,8 +3,12 @@ import controllers from '../controllers';
 
 const router = express.Router();
 
-// List all users in the db
+// INDEX - List all users in the db
 router.get('/users',
   controllers.getAllUsers);
+
+// SHOW - displays more information about a specific user
+router.get('/user/:id',
+  controllers.getSpecificUser);
 
 export default router;

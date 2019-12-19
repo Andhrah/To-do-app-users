@@ -1,5 +1,9 @@
-import { getAllUsers } from './user';
+import {
+  getAllUsers,
+  getSpecificUser,
+} from './user';
 
 export default {
   getAllUsers,
+  getSpecificUser,
 };

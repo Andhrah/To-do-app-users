@@ -1,10 +1,14 @@
 import express from 'express';
+import bodyParser from 'body-parser';
 // import db from '../server/config';
 import userRoutes from './routes/user';
 
 
 // Create global app object
 const app = express();
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use('/api/v1', userRoutes);
 
